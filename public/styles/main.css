@@ -1,0 +1,82 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  background-color: #f1f5fd;
+}
+
+.view-btn {
+  transition: all 0.3s;
+}
+
+.view-btn:hover {
+  transform: translateY(-2px);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+/* Style for multiple select */
+select[multiple] {
+  height: auto;
+  min-height: 100px;
+}
+
+select[multiple] option {
+  padding: 8px;
+}
+
+select[multiple] option:checked {
+  background-color: #0d6efd;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    margin: 50px auto;
+    padding: 15px;
+  }
+  
+  .table-responsive {
+    font-size: 14px;
+  }
+}
