@@ -1,14 +1,18 @@
 {
   "routes": [
     {
-      "src": "/scripts/.*",
+      "src": "/scripts/(.*)",
       "headers": {
+        "Cache-Control": "public, max-age=3600",
         "Content-Type": "application/javascript"
       }
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "headers": {
+        "Content-Type": "text/html"
+      }
     }
   ]
 }
