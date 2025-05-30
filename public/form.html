@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmers Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Farmers Registration</a>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="form.html">New Farmer</a>
+        <a class="nav-link" href="search.html">Search</a>
+        <button id="logout-btn" class="btn btn-outline-light">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h2>Farmer Registration Form</h2>
+      </div>
+      <div class="card-body">
+        <form id="registration-form">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="gender" class="form-label">Gender *</label>
+                <select class="form-select" id="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" min="18" max="120">
+              </div>
+              <div class="mb-3">
+                <label for="region" class="form-label">Region *</label>
+                <select class="form-select" id="region" required>
+                  <option value="">Select Region</option>
+                  <option value="Tongatapu - Western">Tongatapu - Western</option>
+                  <option value="Tongatapu - Eastern">Tongatapu - Eastern</option>
+                  <option value="Tongatapu - Central">Tongatapu - Central</option>
+                  <option value="Tongatapu - Nukuálofa">Tongatapu - Nukuálofa</option>
+                  <option value="Haápai">Haápai</option>
+                  <option value="Vavaú">Vavaú</option>
+                  <option value="Niua">Niua</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="village" class="form-label">Village</label>
+                <input type="text" class="form-control" id="village">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="groupName" class="form-label">Group Name</label>
+                <input type="text" class="form-control" id="groupName">
+              </div>
+              <div class="mb-3">
+                <label for="farmType" class="form-label">Farm Type *</label>
+                <select class="form-select" id="farmType" required>
+                  <option value="">Select Farm Type</option>
+                  <option value="Fishing">Fishing</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Livestock">Livestock</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="specificActivity" class="form-label">Specific Activity</label>
+                <input type="text" class="form-control" id="specificActivity">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Land Area</label>
+                <div class="row g-2">
+                  <div class="col-4">
+                    <input type="number" step="0.01" class="form-control" id="landTeau" placeholder="Teau">
+                  </div>
+                  <div class="col-4">
+                    <input type="number" step="0.01" class="form-control" id="landEka" placeholder="Eka">
+                  </div>
+                  <div class="col-4">
+                    <input type="number" step="0.01" class="form-control" id="landPole" placeholder="Pole">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="activities" class="form-label">Activities (Select multiple)</label>
+                <select class="form-select" id="activities" multiple>
+                  <option value="Crop farming">Crop farming</option>
+                  <option value="Vegetable farming">Vegetable farming</option>
+                  <option value="Fruit farming">Fruit farming</option>
+                  <option value="Livestock rearing">Livestock rearing</option>
+                  <option value="Poultry farming">Poultry farming</option>
+                  <option value="Fishing">Fishing</option>
+                  <option value="Aquaculture">Aquaculture</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea class="form-control" id="comments" rows="2"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+            <button type="button" id="clear-btn" class="btn btn-secondary">Clear Form</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/form.js"></script>
+</body>
+</html>
