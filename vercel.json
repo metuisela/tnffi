@@ -1,18 +1,19 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/scripts/(.*)",
-      "headers": {
-        "Cache-Control": "public, max-age=3600",
-        "Content-Type": "application/javascript"
-      }
-    },
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html",
-      "headers": {
-        "Content-Type": "text/html"
-      }
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ]
 }
