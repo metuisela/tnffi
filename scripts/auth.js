@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Supabase
     const supabase = window.supabase.createClient(
       'https://duyamagiyvrpqkhkvlrx.supabase.co',
-      'YOUR_PUBLIC_SUPABASE_KEY'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1eWFtYWdpeXZycHFraGt2bHJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2MDA2NTcsImV4cCI6MjA2NDE3NjY1N30.atmVHRAzE1oKx8Tgby_v-Iota_W7c5KOxDEP10_DVLE'
     );
 
     // Login handler
